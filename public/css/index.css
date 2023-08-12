@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+
+#app {
+  top: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr;
+}
+
+#menu {
+  background-color: #f8f8ff;
+  border-bottom: 1px solid #bdbdc6;
+}
+
+#canvasArea {
+  position: relative;
+}
+
+#cytoscapeContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#nodeInfoPopover {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background-color: #ffffff;
+  width: 350px;
+  filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 5.7px 9px);
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  transform: translate(-5000px, -5000px);
+}
+#nodeInfoPopover:before {
+  content: '';
+  right: calc(50% - 12px);
+  top: -10px;
+  border-style: solid;
+  border-width: 0 12px 12px 12px;
+  border-color: transparent transparent #ffffff transparent;
+  position: absolute;
+  z-index: -1;
+}
