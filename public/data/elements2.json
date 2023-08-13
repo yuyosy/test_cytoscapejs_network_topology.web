@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "data": {
+        "id": "tenant-side-router-a01",
+        "label": "TenantA-RT01",
+        "shape": "diamond",
+        "icon": "router",
+        "position": {
+          "site": "site-tenant-aaa",
+          "priority": 1
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "tenant-side-router-a02",
+        "label": "TenantA-RT02",
+        "shape": "diamond",
+        "icon": "router",
+        "position": {
+          "site": "site-tenant-aaa",
+          "priority": 2
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "tenant-side-router-a03",
+        "label": "TenantA-RT03",
+        "shape": "diamond",
+        "icon": "router",
+        "position": {
+          "site": "site-tenant-aaa",
+          "priority": 3
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "tenant-side-router-b01",
+        "label": "TenantB-RT01",
+        "shape": "diamond",
+        "icon": "router",
+        "position": {
+          "site": "site-tenant-bbb",
+          "priority": 1
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "tenant-side-router-b02",
+        "label": "TenantB-RT02",
+        "shape": "diamond",
+        "icon": "router",
+        "position": {
+          "site": "site-tenant-bbb",
+          "priority": 2
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "internal-tenant-side-router-01",
+        "label": "TN-RT01",
+        "shape": "ellipse",
+        "icon": "router",
+        "position": {
+          "site": "site-internal-tenant",
+          "priority": 1
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "internal-cloud-side-router-01",
+        "label": "PC-RT01",
+        "shape": "ellipse",
+        "icon": "router",
+        "position": {
+          "site": "site-internal-cloud",
+          "priority": 1
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "cloud-side-router-01",
+        "label": "Cloud-01",
+        "shape": "hexagon",
+        "icon": "cloud",
+        "position": {
+          "site": "site-cloud",
+          "priority": 1
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "data": {
+        "id": "link-tenent01-tn01",
+        "label": "",
+        "source": "tenant-side-router-a01",
+        "target": "internal-tenant-side-router-01",
+        "source_label": "Gi0/0/1",
+        "target_label": "Gi0/0/1"
+      }
+    },
+    {
+      "data": {
+        "id": "link-tnrt01-pcrt01",
+        "label": "",
+        "source": "internal-tenant-side-router-01",
+        "target": "internal-cloud-side-router-01",
+        "source_label": "Gi0/0/0",
+        "target_label": "Gi0/0/0"
+      }
+    },
+    {
+      "data": {
+        "id": "link-pcrt01-cloud01",
+        "label": "",
+        "source": "internal-cloud-side-router-01",
+        "target": "cloud-side-router-01",
+        "source_label": "Gi0/0/1",
+        "target_label": "Gi0/0/1"
+      }
+    }
+  ]
+}
