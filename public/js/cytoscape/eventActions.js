@@ -34,6 +34,7 @@ export const showPopover = (event) => {
   popover.style.zIndex = 10;
   popover.style.visibility = 'visible';
   popover.style.transform = `translate(${x}px, ${y}px)`;
+  popover.setValue(event);
 };
 
 export const hidePopover = (event) => {

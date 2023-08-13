@@ -1,7 +1,7 @@
 import * as actions from './eventActions.js';
 
 /**
- * @type {import('./types').EventHandler}
+ * @param {import('./types').EventHandler}
  */
 export const selectNodeHandler = (event) => {
   // console.log(event);
@@ -9,7 +9,7 @@ export const selectNodeHandler = (event) => {
 };
 
 /**
- * @type {import('./types').EventHandler}
+ * @param {import('./types').EventHandler}
  */
 export const unselectNodeHandler = (event) => {
   // console.log(event);
@@ -17,7 +17,7 @@ export const unselectNodeHandler = (event) => {
 };
 
 /**
- * @type {import('./types').EventHandler}
+ * @param {import('./types').EventHandler}
  */
 export const mouseoverNodeHandler = (event) => {
   // console.log(event);
@@ -28,7 +28,7 @@ export const mouseoverNodeHandler = (event) => {
 };
 
 /**
- * @type {import('./types').EventHandler}
+ * @param {import('./types').EventHandler}
  */
 export const mouseoutNodeHandler = (event) => {
   // console.log(event);
